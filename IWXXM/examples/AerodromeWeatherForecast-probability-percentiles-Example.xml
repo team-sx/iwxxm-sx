@@ -135,35 +135,35 @@
                         <tsml:RangeTVP>
                             <tsml:time>2001-01-31T00:10:00Z</tsml:time>
                             <tsml:minValue>2.2 105 3.5</tsml:minValue>
-                            <tsml:maxValue>1.2 115 1.7</tsml:maxValue>
+                            <tsml:maxValue>2.5 113 4.5</tsml:maxValue>
                         </tsml:RangeTVP>
                     </tsml:point>
                     <tsml:point>
                         <tsml:RangeTVP>
                             <tsml:time>2001-01-31T00:20:00Z</tsml:time>
                             <tsml:minValue>3.0 95.1 4.0</tsml:minValue>
-                            <tsml:maxValue>1.2 115 1.7</tsml:maxValue>
+                            <tsml:maxValue>3.2 115 2.5</tsml:maxValue>
                         </tsml:RangeTVP>
                     </tsml:point>
                     <tsml:point>
                         <tsml:RangeTVP>
                             <tsml:time>2001-01-31T00:30:00Z</tsml:time>
                             <tsml:minValue>1.5 94.0 2.0</tsml:minValue>
-                            <tsml:maxValue>1.2 115 1.7</tsml:maxValue>
+                            <tsml:maxValue>1.7 117 2.7</tsml:maxValue>
                         </tsml:RangeTVP>
                     </tsml:point>
                     <tsml:point>
                         <tsml:RangeTVP>
                             <tsml:time>2001-01-31T00:40:00Z</tsml:time>
                             <tsml:minValue>1.5 94.0 2.5</tsml:minValue>
-                            <tsml:maxValue>1.2 115 1.7</tsml:maxValue>
+                            <tsml:maxValue>1.8 114 3.1</tsml:maxValue>
                         </tsml:RangeTVP>
                     </tsml:point>
                     <tsml:point>
                         <tsml:RangeTVP>
                             <tsml:time>2001-01-31T00:50:00Z</tsml:time>
                             <tsml:minValue>1.5 94.0 2.3</tsml:minValue>
-                            <tsml:maxValue>1.2 115 1.7</tsml:maxValue>
+                            <tsml:maxValue>1.7 116 3.0</tsml:maxValue>
                         </tsml:RangeTVP>
                     </tsml:point>
                     <iwxxm:pointRecord>
