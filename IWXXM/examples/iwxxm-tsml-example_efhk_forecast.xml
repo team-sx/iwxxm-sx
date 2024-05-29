@@ -29,13 +29,13 @@
     </iwxxm:boundingVolume>
     
     <!-- A list of all phenomena of all objects -->
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/forecast/wind" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/forecast/windShear" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/forecast/turbulence" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/forecast/icing" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/forecast/cloud" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/forecast/visibility" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/forecast/weather" />
+    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/wind" />
+    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/windShear" />
+    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/turbulence" />
+    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/icing" />
+    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/cloud" />
+    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/visibility" />
+    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/weather" />
     
     <!-- Issue time of the collective -->
     <iwxxm:issueTime>
@@ -76,7 +76,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/forecast/wind" />
+            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/wind" />
             
             <iwxxm:phenomenonGeometry>
                 <!-- Airport area on the ground level -->
@@ -228,7 +228,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/forecast/windShear" />
+            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/windShear" />
             
             <iwxxm:phenomenonGeometry>
                 <!-- Airport area on the ground level -->
@@ -261,7 +261,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="shearintensity" position="1">
                             <tsml:qualifier>
-                                <swe:Quantity definition="http://preferred.observable-property.registry/windShearIntensity">
+                                <swe:Quantity definition="http://preferred.observable-property.registry/windShear/intensity">
                                     <swe:label>Intensity of wind shear</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -329,7 +329,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="shearlowhigh" position="1">
                             <tsml:qualifier>
-                                <swe:QuantityRange definition="http://preferred.observable-property.registry/windshearHeight">
+                                <swe:QuantityRange definition="http://preferred.observable-property.registry/windshear/height">
                                     <swe:label>Wind shear occurrence height (base-top)</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -399,7 +399,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/forecast/turbulence" />
+            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/turbulence" />
             
             <iwxxm:phenomenonGeometry>
                 
@@ -434,7 +434,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="shearintensity" position="1">
                             <tsml:qualifier>
-                                <swe:Quantity definition="http://preferred.observable-property.registry/turbulenceIntensity">
+                                <swe:Quantity definition="http://preferred.observable-property.registry/turbulence/intensity">
                                     <swe:label>Intensity of turbulence</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -502,7 +502,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="shearlowhigh" position="1">
                             <tsml:qualifier>
-                                <swe:QuantityRange definition="http://preferred.observable-property.registry/turbulenceHeight">
+                                <swe:QuantityRange definition="http://preferred.observable-property.registry/turbulence/height">
                                     <swe:label>Turbulence occurrence height (base-top)</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -571,7 +571,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/forecast/icing" />
+            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/icing" />
             
             <iwxxm:phenomenonGeometry>
                 <!-- Airport area on the ground level -->
@@ -606,7 +606,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="iceintensity" position="1">
                             <tsml:qualifier>
-                                <swe:Quantity definition="http://preferred.observable-property.registry/icingIntensity">
+                                <swe:Quantity definition="http://preferred.observable-property.registry/icing/intensity">
                                     <swe:label>Intensity of icing</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -675,7 +675,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="icelowhigh" position="1">
                             <tsml:qualifier>
-                                <swe:QuantityRange definition="http://preferred.observable-property.registry/icingHeight">
+                                <swe:QuantityRange definition="http://preferred.observable-property.registry/icing/height">
                                     <swe:label>Icing occurrence height (base-top)</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -744,7 +744,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/forecast/cloud" />
+            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/cloud" />
             
             <iwxxm:phenomenonGeometry>
                 
@@ -774,7 +774,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="cbprob" position="1">
                             <tsml:qualifier>
-                                <swe:Quantity definition="http://preferred.observable-property.registry/cbprob">
+                                <swe:Quantity definition="http://preferred.observable-property.registry/cloud/cbprob">
                                     <swe:label>Probability of CB cloud formation (0-1)</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -789,7 +789,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="cbbase" position="2">
                             <tsml:qualifier>
-                                <swe:Quantity definition="http://preferred.observable-property.registry/cbbase">
+                                <swe:Quantity definition="http://preferred.observable-property.registry/cloud/cbbase">
                                     <swe:label>Height of Cumulonimbus (CB) cloud base</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -804,7 +804,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="cloudceiling" position="3">
                             <tsml:qualifier>
-                                <swe:Quantity definition="http://preferred.observable-property.registry/cloudCeiling">
+                                <swe:Quantity definition="http://preferred.observable-property.registry/cloud/ceiling">
                                     <swe:label>Height of the cloud ceiling</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -873,7 +873,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/forecast/visibility" />
+            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/visibility" />
             
             <iwxxm:phenomenonGeometry>
                 
@@ -903,7 +903,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="vis" position="1">
                             <tsml:qualifier>
-                                <swe:Quantity definition="http://preferred.observable-property.registry/visibility">
+                                <swe:Quantity definition="http://preferred.observable-property.registry/visibility/vis">
                                     <swe:label>Visibility</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -918,7 +918,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="lvpprob" position="2">
                             <tsml:qualifier>
-                                <iwxxm:QuantityValueBetweenProbability>
+                                <iwxxm:QuantityValueBetweenProbability definition="http://preferred.observable-property.registry/visibility/lvp">
                                     <swe:label>Probability of need to start low visibility procedures (LVP)</swe:label>
                                     <swe:description>Probability of visibility under 500ft or cloud base below 500ft</swe:description>
                                     <swe:nilValues>
@@ -930,14 +930,14 @@
                                     <iwxxm:range>
                                         <swe:DataChoice>
                                             <swe:item name="visibilityComponent">
-                                                <swe:QuantityRange definition="http://preferred.observable-property.registry/visibility">
+                                                <swe:QuantityRange definition="http://preferred.observable-property.registry/visibility/vis">
                                                     <swe:label>Visibility</swe:label>
                                                     <swe:uom xlink:href="https://unitsofmeasure.org/ucum#ft_i" code="ft" />
                                                     <swe:value>0 500</swe:value>
                                                 </swe:QuantityRange>
                                             </swe:item>
                                             <swe:item name="cloudBaseComponent">
-                                                <swe:QuantityRange definition="http://preferred.observable-property.registry/cloudCeiling">
+                                                <swe:QuantityRange definition="http://preferred.observable-property.registry/cloud/ceiling">
                                                     <swe:label>Height cloud ceiling</swe:label>
                                                     <swe:uom xlink:href="https://unitsofmeasure.org/ucum#ft_i" code="ft" />
                                                     <swe:value>0 500</swe:value>
@@ -1008,7 +1008,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/forecast/visibility" />
+            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/weather" />
             
             <iwxxm:phenomenonGeometry>
                 
@@ -1038,7 +1038,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="ww" position="1">
                             <tsml:qualifier>
-                                <swe:Quantity definition="http://preferred.observable-property.registry/weather">
+                                <swe:Quantity definition="http://preferred.observable-property.registry/weather/ww">
                                     <swe:label>Visibility</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -1053,7 +1053,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="tsprob" position="2">
                             <tsml:qualifier>
-                                <swe:Quantity definition="http://preferred.observable-property.registry/thunderstormProbability">
+                                <swe:Quantity definition="http://preferred.observable-property.registry/weather/thunderstormProbability">
                                     <swe:label>Probability of thunderstorms occurring (0-1)</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -1068,7 +1068,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="rain" position="3">
                             <tsml:qualifier>
-                                <swe:Quantity definition="http://preferred.observable-property.registry/rainFallAmount">
+                                <swe:Quantity definition="http://preferred.observable-property.registry/weather/rainFallAmount">
                                     <swe:label>Rain</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -1083,7 +1083,7 @@
                         
                         <tsml:FieldSpecificPointMetadata field="snow" position="4">
                             <tsml:qualifier>
-                                <swe:Quantity definition="http://preferred.observable-property.registry/snowFallAmount">
+                                <swe:Quantity definition="http://preferred.observable-property.registry/weather/snowFallAmount">
                                     <swe:label>Rain</swe:label>
                                     <swe:nilValues>
                                         <swe:NilValues>
@@ -1152,7 +1152,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/forecast/wind" />
+            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/wind" />
 
             <iwxxm:phenomenonGeometry>
                 <gml:GeometricComplex gml:id="uuid.9ae2b4a7-d24b-4995-b2c4-38db3ba635eb">
@@ -1476,7 +1476,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/forecast/wind" />
+            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/wind" />
 
             <iwxxm:phenomenonGeometry>
                 <gml:GeometricComplex gml:id="uuid.5cb8fbcc-b7c7-4f6d-9694-0bcae702e1d0">
