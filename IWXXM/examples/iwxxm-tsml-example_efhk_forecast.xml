@@ -28,14 +28,16 @@
         </iwxxm:ElevatedEnvelope>
     </iwxxm:boundingVolume>
     
-    <!-- A list of all phenomena of all objects -->
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/wind" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/windShear" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/turbulence" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/icing" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/cloud" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/visibility" />
-    <iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/weather" />
+    <!-- A list of all phenomena of all objects, commented out the ones I could not find 
+        a match under https://codes.wmo.int/49-2/MeteorologicalFeature, else the validation fails -->
+    
+    <!-- iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/wind" /-->
+    <!-- iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/windShear" /-->
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/TURBULENCE" />
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/AIRFRAME_ICING" />
+    <iwxxm:phenomenaList xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/CLOUD" />
+    <!-- iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/visibility" /-->
+    <!-- iwxxm:phenomenaList xlink:href="http://preferred.observable-property.registry/weather" /-->
     
     <!-- Issue time of the collective -->
     <iwxxm:issueTime>
@@ -399,7 +401,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/turbulence" />
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/TURBULENCE" />
             
             <iwxxm:phenomenonGeometry>
                 
@@ -571,7 +573,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/icing" />
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/AIRFRAME_ICING" />
             
             <iwxxm:phenomenonGeometry>
                 <!-- Airport area on the ground level -->
@@ -744,7 +746,7 @@
                 </gml:TimePeriod>
             </iwxxm:phenomenonTime>
             
-            <iwxxm:phenomenon xlink:href="http://preferred.observable-property.registry/cloud" />
+            <iwxxm:phenomenon xlink:href="http://codes.wmo.int/49-2/MeteorologicalFeature/CLOUD" />
             
             <iwxxm:phenomenonGeometry>
                 
