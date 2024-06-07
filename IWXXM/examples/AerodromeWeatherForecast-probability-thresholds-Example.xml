@@ -73,7 +73,7 @@
         </gml:TimePeriod>
     </iwxxm:phenomenonTime>
     
-    <!-- A wind weather forecast object with a timeseries of probabilities of falling between or exceeding given quantity values  -->
+    <!-- A wind weather forecast object with a timeseries of probabilities of in-range or exceeding given quantity values  -->
     <iwxxm:feature>
         <iwxxm:AerodromeWeatherPhenomenonForecast gml:id="uuid.2106d31a-7406-4d3a-aff9-c522ae0ad73e">
             <gml:identifier codeSpace="http://wafs/sigwxobj">wxobj1</gml:identifier>
@@ -106,108 +106,113 @@
                     </tsml:metadata>
                     
                     <tsml:defaultPointMetadata>
-                        <tsml:FieldSpecificPointMetadata field="windSpeed" position="1">
+                        <tsml:FieldSpecificPointMetadata field="windSpeedExceedanceProbability" position="1">
                             <tsml:qualifier>
-                                <iwxxm:QuantityValueExceedenceProbability>
-                                    <swe:label>Probability of 10 min average wind speed exceeding 15.0 m/s</swe:label>
+                                <iwxxm:QuantityValueInRangeProbability>
+                                    <swe:label>Probability of 10 min average wind speed 1 hour maximum exceeding 15.0 m/s</swe:label>
                                     <swe:uom xlink:href="https://qudt.org/vocab/unit/UNITLESS" />
-                                    <iwxxm:limit>
-                                        <swe:Quantity definition="http://preferred.observable-property.registry/windSpeed">
-                                            <swe:label>Wind speed</swe:label>
+                                    <iwxxm:quantity>
+                                        <iwxxm:AggregatedQuantity>
+                                            <swe:label>1h maximum wind speed</swe:label>
                                             <swe:uom xlink:href="https://unitsofmeasure.org/ucum#m_s" code="m/s"/>
-                                            <swe:value>15.0</swe:value>
-                                        </swe:Quantity>
-                                    </iwxxm:limit>
-                                    <iwxxm:limitQuantityMetadata>
-                                        <tsml:PointMetadata>
-                                            <tsml:interpolationType xlink:href="http://www.opengis.net/def/timeseries/InterpolationCode/AveragePrec"/>
-                                            <tsml:aggregationDuration>PT10M</tsml:aggregationDuration>
-                                        </tsml:PointMetadata>
-                                    </iwxxm:limitQuantityMetadata>
-                                </iwxxm:QuantityValueExceedenceProbability>
+                                            <iwxxm:baseQuantity>
+                                                <iwxxm:AggregatedQuantity>
+                                                    <swe:label>10 min average wind speed</swe:label>
+                                                    <swe:uom xlink:href="https://unitsofmeasure.org/ucum#m_s" code="m/s"/>
+                                                    <iwxxm:aggregationFunction xlink:href="http://www.opengis.net/def/timeseries/InterpolationCode/AveragePrec"/>
+                                                    <iwxxm:aggregationPeriod>PT10M</iwxxm:aggregationPeriod>
+                                                </iwxxm:AggregatedQuantity>
+                                            </iwxxm:baseQuantity>
+                                            <iwxxm:aggregationFunction xlink:href="http://www.opengis.net/def/timeseries/InterpolationCode/MaxPrec"/>
+                                            <iwxxm:aggregationPeriod>PT1H</iwxxm:aggregationPeriod>
+                                        </iwxxm:AggregatedQuantity>
+                                    </iwxxm:quantity>
+                                    <iwxxm:lowerLimit>15.0</iwxxm:lowerLimit>
+                                </iwxxm:QuantityValueInRangeProbability>
                             </tsml:qualifier>
                         </tsml:FieldSpecificPointMetadata>
                         
-                        <tsml:FieldSpecificPointMetadata field="windDirectionProbability" position="2">
+                        <tsml:FieldSpecificPointMetadata field="windDirectionInRangeProbability" position="2">
                             <tsml:qualifier>
-                                <iwxxm:QuantityValueBetweenProbability>
+                                <iwxxm:QuantityValueInRangeProbability>
                                     <swe:label>Probability of 10 min average wind direction falling between 90 and 110 degrees</swe:label>
                                     <swe:uom xlink:href="https://qudt.org/vocab/unit/UNITLESS" />
-                                    <iwxxm:range>
-                                        <swe:QuantityRange>
-                                            <swe:label>Wind direction</swe:label>
+                                    <iwxxm:quantity>
+                                        <iwxxm:AggregatedQuantity>
+                                            <swe:label>1h average wind direction</swe:label>
                                             <swe:uom xlink:href="https://unitsofmeasure.org/ucum#deg" code="deg"/>
-                                            <swe:value>90 110</swe:value>
-                                        </swe:QuantityRange>
-                                    </iwxxm:range>
-                                    <iwxxm:rangeQuantityMetadata>
-                                        <tsml:PointMetadata>
-                                            <tsml:interpolationType xlink:href="http://www.opengis.net/def/timeseries/InterpolationCode/AveragePrec"/>
-                                            <tsml:aggregationDuration>PT10M</tsml:aggregationDuration>
-                                        </tsml:PointMetadata>
-                                    </iwxxm:rangeQuantityMetadata>
-                                </iwxxm:QuantityValueBetweenProbability>
+                                            <iwxxm:aggregationFunction xlink:href="http://www.opengis.net/def/timeseries/InterpolationCode/AveragePrec"/>
+                                            <iwxxm:aggregationPeriod>PT1H</iwxxm:aggregationPeriod>
+                                        </iwxxm:AggregatedQuantity>
+                                    </iwxxm:quantity>
+                                    <iwxxm:lowerLimit>0</iwxxm:lowerLimit>
+                                    <iwxxm:upperLimit>90</iwxxm:upperLimit>
+                                </iwxxm:QuantityValueInRangeProbability>
                             </tsml:qualifier>
                         </tsml:FieldSpecificPointMetadata>
                         
-                        <tsml:FieldSpecificPointMetadata field="windGustExceedenceProbability" position="3">
+                        <tsml:FieldSpecificPointMetadata field="windGustExceedanceProbability" position="3">
                             <tsml:qualifier>
-                                <iwxxm:QuantityValueExceedenceProbability>
+                                <iwxxm:QuantityValueInRangeProbability>
                                     <swe:label>Probability of 10 min maximun wind gust exceeding 20.0 m/s</swe:label>
                                     <swe:uom xlink:href="https://qudt.org/vocab/unit/UNITLESS" />
-                                    <iwxxm:limit>
-                                        <swe:Quantity definition="http://preferred.observable-property.registry/windGust">
-                                            <swe:label>Wind gust</swe:label>
+                                    <iwxxm:quantity>
+                                        <iwxxm:AggregatedQuantity>
+                                            <swe:label>1h maximum wind gust</swe:label>
                                             <swe:uom xlink:href="https://unitsofmeasure.org/ucum#m_s" code="m/s"/>
-                                            <swe:value>20.0</swe:value>
-                                        </swe:Quantity>
-                                    </iwxxm:limit>
-                                    <iwxxm:limitQuantityMetadata>
-                                        <tsml:PointMetadata>
-                                            <tsml:interpolationType xlink:href="http://www.opengis.net/def/timeseries/InterpolationCode/MaxPrec"/>
-                                            <tsml:aggregationDuration>PT10M</tsml:aggregationDuration>
-                                        </tsml:PointMetadata>
-                                    </iwxxm:limitQuantityMetadata>
-                                </iwxxm:QuantityValueExceedenceProbability>
+                                            <iwxxm:baseQuantity>
+                                                <iwxxm:AggregatedQuantity>
+                                                    <swe:label>10 min average wind gust</swe:label>
+                                                    <swe:uom xlink:href="https://unitsofmeasure.org/ucum#m_s" code="m/s"/>
+                                                    <iwxxm:aggregationFunction xlink:href="http://www.opengis.net/def/timeseries/InterpolationCode/AveragePrec"/>
+                                                    <iwxxm:aggregationPeriod>PT10M</iwxxm:aggregationPeriod>
+                                                </iwxxm:AggregatedQuantity>
+                                            </iwxxm:baseQuantity>
+                                            <iwxxm:aggregationFunction xlink:href="http://www.opengis.net/def/timeseries/InterpolationCode/MaxPrec"/>
+                                            <iwxxm:aggregationPeriod>PT1H</iwxxm:aggregationPeriod>
+                                        </iwxxm:AggregatedQuantity>
+                                    </iwxxm:quantity>
+                                    <iwxxm:upperLimit>20.0</iwxxm:upperLimit>
+                                </iwxxm:QuantityValueInRangeProbability>
                             </tsml:qualifier>
                         </tsml:FieldSpecificPointMetadata>
                         
                     </tsml:defaultPointMetadata>
                     <tsml:point>
-                        <tsml:RecordTVP>
+                        <iwxxm:RecordTVP>
                             <tsml:time>2001-01-31T00:00:00Z</tsml:time>
-                            <tsml:value>0.84 0.95 0.99</tsml:value>
-                        </tsml:RecordTVP>
+                            <iwxxm:value>0.84 0.95 0.99</iwxxm:value>
+                        </iwxxm:RecordTVP>
                     </tsml:point>
                     <tsml:point>
-                        <tsml:RecordTVP>
+                        <iwxxm:RecordTVP>
                             <tsml:time>2001-01-31T00:10:00Z</tsml:time>
-                            <tsml:value>0.90 0.94 0.98</tsml:value>
-                        </tsml:RecordTVP>
+                            <iwxxm:value>0.90 0.94 0.98</iwxxm:value>
+                        </iwxxm:RecordTVP>
                     </tsml:point>
                     <tsml:point>
-                        <tsml:RecordTVP>
+                        <iwxxm:RecordTVP>
                             <tsml:time>2001-01-31T00:20:00Z</tsml:time>
-                            <tsml:value>0.82 0.94 0.97</tsml:value>
-                        </tsml:RecordTVP>
+                            <iwxxm:value>0.82 0.94 0.97</iwxxm:value>
+                        </iwxxm:RecordTVP>
                     </tsml:point>
                     <tsml:point>
-                        <tsml:RecordTVP>
+                        <iwxxm:RecordTVP>
                             <tsml:time>2001-01-31T00:30:00Z</tsml:time>
-                            <tsml:value>0.89 0.92 0.95</tsml:value>
-                        </tsml:RecordTVP>
+                            <iwxxm:value>0.89 0.92 0.95</iwxxm:value>
+                        </iwxxm:RecordTVP>
                     </tsml:point>
                     <tsml:point>
-                        <tsml:RecordTVP>
+                        <iwxxm:RecordTVP>
                             <tsml:time>2001-01-31T00:40:00Z</tsml:time>
-                            <tsml:value>0.93 0.90 0.96</tsml:value>
-                        </tsml:RecordTVP>
+                            <iwxxm:value>0.93 0.90 0.96</iwxxm:value>
+                        </iwxxm:RecordTVP>
                     </tsml:point>
                     <tsml:point>
-                        <tsml:RecordTVP>
+                        <iwxxm:RecordTVP>
                             <tsml:time>2001-01-31T00:50:00Z</tsml:time>
-                            <tsml:value>0.90 0.96 0.98</tsml:value>
-                        </tsml:RecordTVP>
+                            <iwxxm:value>0.90 0.96 0.98</iwxxm:value>
+                        </iwxxm:RecordTVP>
                     </tsml:point>
                   
                 </iwxxm:WeatherPhenomenonTimeseriesTVP>
