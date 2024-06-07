@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     A sample file for Aerodrome Weather Forecast Objects
-
 -->
 <iwxxm:MeteorologicalFeatureCollection 
     xmlns:iwxxm="http://icao.int/iwxxm/sx"
