@@ -1,4 +1,5 @@
 /bin export-ignore
+/documentation export-ignore
 /externalSchema export-ignore
 /IWXXM/XMI export-ignore
 /.* export-ignore
